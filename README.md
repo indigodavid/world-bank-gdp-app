@@ -2,56 +2,57 @@
 
 # Project Name
 
-> Description the project.
+> This is a SPA (Single Page App) that retrieves the GDP data from the World Bank API. The site is developed using React for the frontend, Redux to keep the state of the App, testing with JEST and the React Testing Library, and style using SASS.
 
 
 ## Built With
 
 - React
-- Frameworks
-- Technologies used
+- Redux Toolkit
+- JEST
+- CSS
+- World Bank API
 
-## Live Demo (if available)
+## Live Demo
 
 [Live Demo Link](https://livedemo.com)
 
 
 ## Getting Started
 
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
-
-
 To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
 
+- NPM
+- Modern Web Browser
+- Git
+
 ### Setup
 
+    git clone https://github.com/indigodavid/world-bank-gdp-app.git
+    cd world-bank-gdp-app/
 ### Install
 
+    npm install
 ### Usage
 
+    npm start
+    
 ### Run tests
 
+    npm test
 ### Deployment
 
-
+    npm run build
 
 ## Authors
 
 👤 **David Vera**
 
-- GitHub: [@indigodavid](https://github.com/indigodavid)
-- Twitter: [@indigo1987](https://twitter.com/indigo1987)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/david-vera-castillo-001b5756/)
-
-👤 **Author2**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
-
+- GitHub: [![GitHub Badge](https://img.shields.io/badge/-indigodavid-white?logo=GitHub&logoColor=181717&style=plastic)](https://github.com/indigodavid)
+- Twitter: [![Twitter Badge](https://img.shields.io/badge/-indigo1987-white?logo=Twitter&logoColor=1DA1F2&style=plastic)](https://twitter.com/indigo1987)
+- LinkedIn: [![LinkedIn Badge](https://img.shields.io/badge/-davidveracastillo-white?logo=LinkedIn&logoColor=1DA1F2&style=plastic)](https://linkedin.com/in/david-vera-castillo-001b5756/)
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
@@ -64,9 +65,10 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
+- My supportives family 😊
+- Microverse
 - Hat tip to anyone whose code was used
-- Inspiration
-- etc
+- 
 
 ## 📝 License
 
