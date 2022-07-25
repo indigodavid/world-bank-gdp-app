@@ -1,10 +1,11 @@
 import { Route, Routes } from 'react-router-dom';
-import './App.css';
+import './styles/App.scss';
+import Details from './pages/Details';
 
 function App() {
   return (
     <Routes>
-      <Route path="/" />
+      <Route path="/" element={<Details country="Ecuador" />} />
     </Routes>
   );
 }
