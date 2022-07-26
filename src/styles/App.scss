@@ -1,0 +1,16 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+$color-bg: #121212;
+$color-white: #fff;
+$color-accent: #4369b2;
+
+body {
+  background-color: $color-bg;
+  color: $color-white;
+}
