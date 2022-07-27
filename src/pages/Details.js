@@ -1,17 +1,13 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import { useParams } from 'react-router-dom';
 
-const Details = (props) => {
-  const { country } = props;
+const Details = () => {
+  const { country } = useParams();
   return (
     <div>
       {country}
     </div>
   );
-};
-
-Details.propTypes = {
-  country: PropTypes.string.isRequired,
 };
 
 export default Details;
