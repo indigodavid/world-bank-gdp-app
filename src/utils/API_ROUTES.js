@@ -12,7 +12,9 @@ const generateCountryGdpURL = (countryCode) => (
 );
 
 const generateCountriesURL = (regionCode) => (
-  `${BASE_URL}/country/${regionCode}/${JSON_FORMAT}`
+  regionCode
+    ? `${BASE_URL}/country${JSON_FORMAT}&region=${regionCode}&per_page=300`
+    : `${BASE_URL}/country${JSON_FORMAT}&per_page=300`
 );
 
 export {
