@@ -33,22 +33,29 @@ const fetchCountryGDP = createAsyncThunk(
   },
 );
 
-const regionsSlice = createSlice({
-  name: 'regions',
+const countriesSlice = createSlice({
+  name: 'countries',
   initialState,
   reducers: {},
   extraReducers: (builder) => {
-    builder.addCase(fetchCountries.fulfilled, (state, action) => action.payload);
+    builder.addCase(fetchCountries.fulfilled, (state, action) => (
+      action.payload.map((country) => ({
+        ...country,
+        gdp: [0],
+        gdpStatus: 'idle',
+      }))
+    ));
     builder.addCase(fetchCountry.fulfilled, (state, action) => state.push(action.payload));
     builder.addCase(fetchCountryGDP.fulfilled, (state, action) => {
       if (action.payload) {
         const gdpValues = action.payload;
         const code = gdpValues[0].countryiso3code;
         return state.map((country) => {
-          if (country.code === code) {
+          if (country.id === code) {
             const newCountry = {
               ...country,
               gdp: gdpValues,
+              gdpStatus: 'idle',
             };
             return newCountry;
           }
@@ -60,5 +67,5 @@ const regionsSlice = createSlice({
   },
 });
 
-export default regionsSlice.reducer;
+export default countriesSlice.reducer;
 export { fetchCountries, fetchCountry, fetchCountryGDP };
