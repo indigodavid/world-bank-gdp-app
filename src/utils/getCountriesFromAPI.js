@@ -1,10 +1,10 @@
 import { generateCountriesURL } from './API_ROUTES';
 
-const getRegionsFromAPI = async (regionCode) => {
+const getCountriesFromAPI = async (regionCode) => {
   const response = await fetch(generateCountriesURL(regionCode));
-  const unfilteredRegions = await response.json();
-  const regions = unfilteredRegions[1];
-  return regions;
+  const data = await response.json();
+  const countries = data[1];
+  return countries;
 };
 
-export default getRegionsFromAPI;
+export default getCountriesFromAPI;
