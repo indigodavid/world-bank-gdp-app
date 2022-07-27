@@ -1,7 +1,7 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import { Link, useParams } from 'react-router-dom';
-// import Indicator from '../components/Indicator';
+import Indicator from '../components/Indicator';
 
 const Countries = () => {
   const { regionCode } = useParams();
@@ -15,7 +15,8 @@ const Countries = () => {
           {' '}
           <span>{country.id}</span>
           <span>GDP:</span>
-          <Link to={`/deatils/${country.id}`}>{country.id}</Link>
+          <Indicator countryCode={country.id} />
+          <Link to={`/details/${country.id}`}>{country.id}</Link>
         </li>
       ))}
     </ul>
