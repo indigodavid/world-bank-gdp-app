@@ -46,6 +46,27 @@
   text-transform: uppercase;
 }
 
+.regionMenu {
+  background-color: accent($color-accent, 3);
+  flex-basis: 100%;
+  padding: 2em;
+
+  & > a {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 1em;
+
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+
+  &:nth-child(2n) {
+    background-color: accent($color-accent, 4);
+  }
+}
+
 .map {
   min-height: 40vh;
   width: 100%;

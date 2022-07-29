@@ -22,11 +22,15 @@ const Navbar = () => {
   if (title === 'details') {
     link = `/countries/${currentCountry.region.id}`;
   }
-
   const handleClickMenu = () => {
+    const { display } = document.getElementById('menu').style;
+    if (display === 'block') {
+      document.getElementById('menu').style.display = 'none';
+    } else {
+      document.getElementById('menu').style.display = 'block';
+    }
     const { children } = document.getElementById('menuLink');
     [...children].forEach((child) => child.classList.toggle('activeIcon'));
-    document.getElementById('menu').style.display = 'block';
   };
 
   const handleClickSearch = () => {
