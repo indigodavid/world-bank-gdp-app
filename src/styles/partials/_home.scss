@@ -1,0 +1,95 @@
+.regions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2em;
+  background-color: accent($color-accent, 6);
+}
+
+.regionMenu {
+  background-color: accent($color-accent, 3);
+  flex-basis: 100%;
+  padding: 2em;
+
+  & > a {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 1em;
+  }
+
+  &:nth-child(2n) {
+    background-color: accent($color-accent, 4);
+  }
+}
+
+.region {
+  background-color: accent($color-accent, 5);
+  flex-basis: 100%;
+  padding: 2em;
+
+  & > a {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 1em;
+
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+
+  &:first-child {
+    background-color: accent($color-accent, 2);
+  }
+
+  &:nth-child(2n) {
+    background-color: accent($color-accent, 4);
+  }
+}
+
+.region > a > div {
+  flex-basis: 50%;
+}
+
+.regionInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.regionTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.map {
+  min-height: 40vh;
+  width: 100%;
+}
+
+#menu {
+  position: absolute;
+  inset: 0 0;
+  display: none;
+  z-index: 10;
+  background-color: accent($color-accent, 6);
+}
+
+.wrapper {
+  position: relative;
+}
+
+@media screen and (min-width: 48em) {
+  .region {
+    flex-basis: 48%;
+
+    &:first-child {
+      flex-basis: 100%;
+
+      & > a {
+        flex-direction: row;
+      }
+    }
+  }
+}

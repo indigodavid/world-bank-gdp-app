@@ -1,8 +1,8 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Project Name
+# World Bank GDP App
 
-> This is a SPA (Single Page App) that retrieves the GDP data from the World Bank API. The site is developed using React for the frontend, Redux to keep the state of the App, testing with JEST and the React Testing Library, and style using SASS.
+> This is a SPA (Single Page App) that retrieves the GDP data from the World Bank API. The site is developed using React for the frontend, Redux to keep the state of the App, testing with JEST and the React Testing Library, and style using SASS. Check my video describing the main features for this project in this [link](https://www.loom.com/share/9e9217a28fa34b7da91c606e102e7c6e).
 
 
 ## Built With
@@ -12,10 +12,11 @@
 - JEST
 - CSS
 - World Bank API
+- React Simple Maps
 
 ## Live Demo
 
-[Live Demo Link](https://livedemo.com)
+[Live Demo Link](https://dv-world-bank-gdp-app.netlify.app)
 
 
 ## Getting Started
@@ -38,13 +39,13 @@ To get a local copy up and running follow these simple example steps.
 ### Usage
 
     npm start
-    
+    npm run build
 ### Run tests
 
     npm test
 ### Deployment
 
-    npm run build
+- [Netlify](https://dv-world-bank-gdp-app.netlify.app)
 
 ## Authors
 
@@ -65,7 +66,8 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- My supportives family 😊
+- My supportive family 😊
+- TopoJSON created by [David Eldersveld](https://github.com/deldersveld) 
 - Microverse
 - Hat tip to anyone whose code was used
 - 
