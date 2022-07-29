@@ -69,6 +69,7 @@
 
     &:first-child {
       flex-basis: 100%;
+
       & > a {
         flex-direction: row;
       }

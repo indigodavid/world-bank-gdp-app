@@ -1,3 +1,4 @@
+/* stylelint-disable at-rule-no-unknown */
 @function accent($c, $b) {
-  @return adjust-color($c, $blackness: $b * 10% - 50%)
+  @return adjust-color($c, $blackness: $b * 10% - 50%);
 }
