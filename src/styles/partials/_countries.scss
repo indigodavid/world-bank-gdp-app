@@ -6,14 +6,18 @@
 }
 
 .country {
-  background-color: accent($color-accent, 2);
+  background-color: accent($color-accent, 4);
+  padding: 2em;
 }
 
 .country > a {
   display: flex;
   align-items: center;
-  padding: 2em;
   gap: 1em;
+
+  &:hover {
+    opacity: 0.5;
+  }
 }
 
 .countryInfo {
