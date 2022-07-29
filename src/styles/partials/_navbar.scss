@@ -1,0 +1,54 @@
+@import './App.scss';
+
+header {
+  display: flex;
+  justify-content: space-between;
+  gap: 1em;
+  align-items: center;
+  padding: 0.8em;
+}
+
+#menuLink {
+  & > * {
+    display: none;
+  }
+
+  .activeIcon {
+    display: block;
+  }
+}
+
+.navTitle {
+  font-size: 1.2rem;
+  text-transform: capitalize;
+}
+
+.searchBar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+
+  button {
+    font-size: 1.5rem;
+  }
+
+  input {
+    appearance: none;
+    border: none;
+    display: none;
+    border-bottom: 2px solid $color-white;
+    font-size: 1rem;
+    background-color: transparent;
+    color: $color-white;
+    padding: 0.1em;
+
+    &::placeholder {
+      color: $color-white;
+    }
+
+    &.activeSearch {
+      display: block;
+    }
+  }
+}

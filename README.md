@@ -12,6 +12,7 @@
 - JEST
 - CSS
 - World Bank API
+- React Simple Maps
 
 ## Live Demo
 
@@ -65,7 +66,8 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- My supportives family 😊
+- My supportive family 😊
+- TopoJSON created by [David Eldersveld](https://github.com/deldersveld) 
 - Microverse
 - Hat tip to anyone whose code was used
 - 

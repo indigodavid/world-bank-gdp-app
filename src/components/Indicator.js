@@ -3,6 +3,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import PropTypes from 'prop-types';
 import { fetchGDP } from '../redux/regions/regions';
 import { fetchCountryGDP } from '../redux/countries/countries';
+import formatCurrency from '../utils/formatCurrency';
+// import formatCurrency from '../utils/formatCurrency';
 
 const Indicator = (props) => {
   const { regionCode, countryCode } = props;
@@ -16,7 +18,10 @@ const Indicator = (props) => {
     }, []);
 
     return (
-      <span>{region.gdp[0] !== 0 ? region.gdp[0].value : 'No Data'}</span>
+      <span>
+        {'GDP in millions: $US '}
+        {region.gdp[0]?.value ? formatCurrency(region.gdp[0].value) : 'No Data'}
+      </span>
     );
   }
 
@@ -29,7 +34,10 @@ const Indicator = (props) => {
     }, []);
 
     return (
-      <span>{country.gdp[0] !== 0 ? country.gdp[0].value : 'No Data'}</span>
+      <span>
+        {'GDP in millions: $US '}
+        {country.gdp[0] !== 0 ? formatCurrency(country.gdp[0].value) : 'No Data'}
+      </span>
     );
   }
 

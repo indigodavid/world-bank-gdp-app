@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Mukta+Vaani:wght@200;300;400;500;600;700;800&display=swap');
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: accent($color-accent, 5);
+  color: $color-white;
+  font-family: $font-body;
+  font-size: 1rem;
+}
+
+ul {
+  list-style: none;
+}
+
+a,
+a:hover,
+a:focus,
+a:visited {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  appearance: none;
+  border: none;
+  color: inherit;
+  background-color: transparent;
+  cursor: pointer;
+  font-size: inherit;
+}

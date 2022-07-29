@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import { fetchCountryGDP } from '../redux/countries/countries';
+import formatCurrency from '../utils/formatCurrency';
 
 const Details = () => {
   const { countryCode } = useParams();
@@ -16,16 +17,16 @@ const Details = () => {
   const { gdp } = country;
 
   return (
-    <ul>
+    <ul className="countries">
       {gdp.map((indicator) => (
-        <li key={`${countryCode}-${indicator.date}`}>
+        <li key={`${countryCode}-${indicator.date}`} className="country countryInfo">
           <span>
-            Date:
+            {'Date: '}
             {indicator.date}
           </span>
           <span>
-            GDP:
-            {indicator.value ? indicator.value : 'Data not available'}
+            {'GDP in Millions: US$ '}
+            {indicator.value ? formatCurrency(indicator.value) : 'Data not available'}
           </span>
         </li>
       ))}
