@@ -2,7 +2,7 @@
 
 # World Bank GDP App
 
-> This is a SPA (Single Page App) that retrieves the GDP data from the World Bank API. The site is developed using React for the frontend, Redux to keep the state of the App, testing with JEST and the React Testing Library, and style using SASS.
+> This is a SPA (Single Page App) that retrieves the GDP data from the World Bank API. The site is developed using React for the frontend, Redux to keep the state of the App, testing with JEST and the React Testing Library, and style using SASS. Check my video describing the main features for this project in this [link](https://www.loom.com/share/9e9217a28fa34b7da91c606e102e7c6e).
 
 
 ## Built With
