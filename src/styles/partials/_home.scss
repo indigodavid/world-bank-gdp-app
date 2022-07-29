@@ -1,0 +1,33 @@
+.regions {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  background-color: accent($color-accent, 6);
+}
+
+.region {
+  background-color: accent($color-accent, 2);
+}
+
+.region > a {
+  display: flex;
+  align-items: center;
+  padding: 2em;
+  gap: 1em;
+}
+
+.region > a > div {
+  flex-basis: 50%;
+}
+
+.regionInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.regionTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}

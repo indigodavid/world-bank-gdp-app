@@ -1,0 +1,3 @@
+@function accent($c, $b) {
+  @return adjust-color($c, $blackness: $b * 10% - 50%)
+}
