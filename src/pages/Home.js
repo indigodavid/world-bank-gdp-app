@@ -33,7 +33,7 @@ const Home = () => {
       </ul>
       <ul id="menu">
         {regions.map((region) => (
-          <li key={`${region.code}-menu`} className="region">
+          <li key={`${region.code}-menu`} className="regionMenu">
             <Link to={`/countries/${region.code}`} onClick={hideMenu}>
               {region.name}
             </Link>
