@@ -64,7 +64,7 @@
 }
 
 .map {
-  min-height: 40vh;
+  min-height: 30vh;
   width: 100%;
 }
 
@@ -80,7 +80,7 @@
   position: relative;
 }
 
-@media screen and (min-width: 48em) {
+@media screen and (min-width: 50em) {
   .region {
     flex-basis: 48%;
 
