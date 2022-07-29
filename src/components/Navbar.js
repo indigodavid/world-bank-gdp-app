@@ -26,6 +26,7 @@ const Navbar = () => {
   const handleClickMenu = () => {
     const { children } = document.getElementById('menuLink');
     [...children].forEach((child) => child.classList.toggle('activeIcon'));
+    document.getElementById('menu').style.display = 'block';
   };
 
   const handleClickSearch = () => {
@@ -59,10 +60,16 @@ const Navbar = () => {
         {detail ? ` - ${detail}` : ''}
       </div>
       <div className="searchBar">
-        <button type="button" onClick={handleClickSearch}>
-          <MdSearch />
-        </button>
-        <input name="search" id="searchInput" placeholder="...search" onChange={handleChange} value={search} />
+        {title === 'countries'
+          ? (
+            <>
+              <button type="button" onClick={handleClickSearch}>
+                <MdSearch />
+              </button>
+              <input name="search" id="searchInput" placeholder="search this region" onChange={handleChange} value={search} />
+            </>
+          )
+          : ''}
       </div>
     </header>
   );
