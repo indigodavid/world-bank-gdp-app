@@ -1,6 +1,6 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Project Name
+# World Bank GDP App
 
 > This is a SPA (Single Page App) that retrieves the GDP data from the World Bank API. The site is developed using React for the frontend, Redux to keep the state of the App, testing with JEST and the React Testing Library, and style using SASS.
 
