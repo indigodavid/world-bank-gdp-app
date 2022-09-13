@@ -38,12 +38,13 @@
     }
   }
 
-  &:first-child {
-    background-color: accent($color-accent, 2);
+  &:nth-child(4n - 3),
+  &:nth-child(4n - 2) {
+    background-color: accent($color-accent, 4);
   }
 
-  &:nth-child(2n) {
-    background-color: accent($color-accent, 4);
+  &:first-child {
+    background-color: accent($color-accent, 2);
   }
 }
 
