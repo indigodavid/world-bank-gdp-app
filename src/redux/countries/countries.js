@@ -41,7 +41,12 @@ const countriesSlice = createSlice({
     builder.addCase(fetchCountries.fulfilled, (state, action) => (
       action.payload.map((country) => ({
         ...country,
-        gdp: [0],
+        gdp: [
+          {
+            date: 'No Data',
+            value: 0,
+          },
+        ],
         gdpStatus: 'idle',
       }))
     ));

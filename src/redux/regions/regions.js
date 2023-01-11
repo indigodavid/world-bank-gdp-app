@@ -31,7 +31,12 @@ const regionsSlice = createSlice({
     builder.addCase(fetchRegions.fulfilled, (state, action) => (
       action.payload.map((region) => ({
         ...region,
-        gdp: [0],
+        gdp: [
+          {
+            date: 'No data',
+            value: 0,
+          },
+        ],
         gdpStatus: 'idle',
       }))
     ));
