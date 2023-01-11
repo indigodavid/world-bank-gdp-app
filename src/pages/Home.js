@@ -1,6 +1,7 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
+import DataChart from '../components/DataChart';
 import Indicator from '../components/Indicator';
 import Loading from '../components/Loading';
 import MapChart from '../components/MapChart';
@@ -25,6 +26,9 @@ const Home = () => {
                 <span className="regionTitle">{region.name}</span>
                 <span>
                   {<Indicator regionCode={region.code} /> || <Loading />}
+                </span>
+                <span>
+                  <DataChart isRegion id={region.code} />
                 </span>
               </div>
             </Link>
