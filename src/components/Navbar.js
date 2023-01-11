@@ -1,11 +1,12 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { MdArrowBackIosNew, MdClose, MdSearch } from 'react-icons/md';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { searchSlice } from '../redux/search/search';
 
 const Navbar = () => {
-  const [search, setSearch] = useState('');
+  const dispatch = useDispatch();
   const countries = useSelector((state) => state.countries);
   const regions = useSelector((state) => state.regions);
   const { pathname } = useLocation();
@@ -38,7 +39,9 @@ const Navbar = () => {
   };
 
   const handleChange = (e) => {
-    setSearch(e.target.value);
+    setTimeout(() => {
+      dispatch(searchSlice.actions.setCurrent(e.target.value));
+    }, 500);
   };
 
   return (
@@ -70,7 +73,7 @@ const Navbar = () => {
               <button type="button" onClick={handleClickSearch}>
                 <MdSearch />
               </button>
-              <input name="search" id="searchInput" placeholder="search this region" onChange={handleChange} value={search} />
+              <input name="search" id="searchInput" placeholder="search this region" onChange={handleChange} />
             </>
           )
           : ''}
