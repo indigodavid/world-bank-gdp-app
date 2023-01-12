@@ -9,7 +9,7 @@
 }
 
 body {
-  background-color: accent($color-accent, 5);
+  background-color: accent($color-accent, 6);
   color: $color-white;
   font-family: $font-body;
   font-size: 1rem;
@@ -34,4 +34,15 @@ button {
   background-color: transparent;
   cursor: pointer;
   font-size: inherit;
+}
+
+#root {
+  max-width: 60em;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 50em) {
+  body {
+    padding: 1em 0;
+  }
 }
