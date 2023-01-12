@@ -18,20 +18,22 @@ const Home = () => {
       <ul className="regions">
         {regions.map((region) => (
           <li key={region.code} className="region">
-            <Link to={`/countries/${region.code}`}>
-              <div className="map">
+            <div className="map">
+              <Link to={`/countries/${region.code}`}>
                 {<MapChart region={region.code} /> || <Loading />}
-              </div>
-              <div className="regionInfo">
-                <span className="regionTitle">{region.name}</span>
-                <span>
-                  {<Indicator regionCode={region.code} /> || <Loading />}
-                </span>
-                <span>
-                  <DataChart isRegion id={region.code} />
-                </span>
-              </div>
-            </Link>
+              </Link>
+            </div>
+            <div className="regionInfo">
+              <span className="regionTitle">
+                <Link to={`/countries/${region.code}`}>{region.name}</Link>
+              </span>
+              <span>
+                {<Indicator regionCode={region.code} /> || <Loading />}
+              </span>
+              <span>
+                <DataChart isRegion id={region.code} />
+              </span>
+            </div>
           </li>
         ))}
       </ul>
