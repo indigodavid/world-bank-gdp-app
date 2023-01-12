@@ -2,14 +2,14 @@ import React from 'react';
 import ReactFC from 'react-fusioncharts';
 import FusionCharts from 'fusioncharts';
 import Line2D from 'fusioncharts/fusioncharts.charts';
-import FusionTheme from 'fusioncharts/themes/fusioncharts.theme.fusion';
+import FusionTheme from 'fusioncharts/themes/fusioncharts.theme.candy';
 import PropTypes from 'prop-types';
 import { useSelector } from 'react-redux';
 
 ReactFC.fcRoot(FusionCharts, Line2D, FusionTheme);
 
 const DataChart = (props) => {
-  const { id, isRegion } = props;
+  const { id, isRegion, isDetailed } = props;
   let dataSource;
 
   if (isRegion) {
@@ -18,27 +18,34 @@ const DataChart = (props) => {
     dataSource = useSelector((state) => state.countries).find((country) => country.code === id);
   }
 
-  let chartData = [
+  let chartLabels = [
     {
       label: 'No Data',
+    },
+  ];
+  let chartData = [
+    {
       value: '0',
     },
   ];
 
-  console.log(dataSource);
-  if (dataSource && dataSource.gdp.length > 1) {
+  if (dataSource) {
     chartData = dataSource.gdp.map((element) => (
       {
-        label: element.date,
         value: element.value.toString() ?? '0',
+      }
+    )).reverse();
+    chartLabels = dataSource.gdp.map((element) => (
+      {
+        label: element.date,
       }
     )).reverse();
   }
 
   const chartConfigs = {
-    type: 'line', // The chart type
-    width: '320', // Width of the chart
-    height: '320', // Height of the chart
+    type: 'scrollline2d', // The chart type
+    width: '300', // Width of the chart
+    height: '250', // Height of the chart
     dataFormat: 'json', // Data type
     dataSource: {
       // Chart Configuration
@@ -52,11 +59,25 @@ const DataChart = (props) => {
         // Set the y-axis name
         yAxisName: 'GDP in Millons of USD',
         // Set the theme for your chart
-        theme: 'fusion',
+        theme: 'candy',
+        lineThickness: 3,
+        flatScrollBars: 1,
+        scrollheight: 10,
+        numVisiblePlot: isDetailed ? 20 : 6,
+        scrollToEnd: true,
         scrollPosition: 'bottom',
       },
       // Chart Data
-      data: chartData,
+      categories: [
+        {
+          category: chartLabels,
+        },
+      ],
+      dataset: [
+        {
+          data: chartData,
+        },
+      ],
     },
   };
   return (
@@ -68,10 +89,12 @@ const DataChart = (props) => {
 DataChart.propTypes = {
   id: PropTypes.string.isRequired,
   isRegion: PropTypes.bool,
+  isDetailed: PropTypes.bool,
 };
 
 DataChart.defaultProps = {
   isRegion: false,
+  isDetailed: false,
 };
 
 export default DataChart;
