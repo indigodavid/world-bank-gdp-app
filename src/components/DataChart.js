@@ -44,7 +44,7 @@ const DataChart = (props) => {
 
   const chartConfigs = {
     type: 'scrollline2d', // The chart type
-    width: '300', // Width of the chart
+    width: '250', // Width of the chart
     height: '250', // Height of the chart
     dataFormat: 'json', // Data type
     dataSource: {
