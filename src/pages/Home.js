@@ -30,7 +30,7 @@ const Home = () => {
               <span>
                 {<Indicator regionCode={region.code} /> || <Loading />}
               </span>
-              <span>
+              <span className="dataChart">
                 <DataChart isRegion id={region.code} />
               </span>
             </div>
