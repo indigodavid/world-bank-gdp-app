@@ -53,11 +53,11 @@ const DataChart = (props) => {
         // Set the chart caption
         caption: dataSource ? dataSource.name : 'No Data',
         // Set the chart subcaption
-        subCaption: 'Millions of USD$',
+        subCaption: 'USD',
         // Set the x-axis name
         xAxisName: 'Years',
         // Set the y-axis name
-        yAxisName: 'GDP in Millons of USD',
+        yAxisName: 'GDP',
         // Set the theme for your chart
         theme: 'candy',
         lineThickness: 3,
@@ -66,6 +66,8 @@ const DataChart = (props) => {
         numVisiblePlot: isDetailed ? 20 : 6,
         scrollToEnd: true,
         scrollPosition: 'bottom',
+        numberScaleValue: '1000,1000,1000',
+        numberScaleUnit: 'K,M,B',
       },
       // Chart Data
       categories: [
